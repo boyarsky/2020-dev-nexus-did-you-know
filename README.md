@@ -10,3 +10,4 @@ The following ideas were proposed and didn't make it. Maybe in a future edition 
 * If you have two jars on the cp that inadvertently have the same class name in it, you get indeterminate behavior. This happens all the time to me when maven jars change location or libraries get updated to split certain packages out.
 * private String lock = "lock"; ....... synchronized(lock){ ...}
 * overriding equals and not hashcode causes weird behavior when using set/map
+* something weird with DecimalFormat that I can reproduce where it output 1000 as something like 1,1,1,1,1,
