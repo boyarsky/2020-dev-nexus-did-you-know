@@ -8,8 +8,33 @@ public class ForRemove {
 
         passes();
         copyOnWrite();
+        clear();
+        removeIf();
         fails();
+    }
 
+    private static void clear() {
+        List<String> list = new CopyOnWriteArrayList<>();
+        list.add("red");
+        list.add("alliance");
+        list.add("blue");
+        list.add("alliance");
+
+        list.clear();
+
+        System.out.println(list);
+    }
+
+    private static void removeIf() {
+        List<String> list = new CopyOnWriteArrayList<>();
+        list.add("red");
+        list.add("alliance");
+        list.add("blue");
+        list.add("alliance");
+
+       list.removeIf(x -> true);
+
+        System.out.println(list);
     }
 
     private static void copyOnWrite() {
